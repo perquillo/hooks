@@ -1,6 +1,6 @@
 {
   "name": "@perquillo/hooks",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "main": "index.js",
   "module": "index.mjs",
   "types": "index.d.ts",
@@ -59,7 +59,7 @@
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "replace-json-property": "^1.9.0",
-    "semantic-release": "^23.0.6",
+    "semantic-release": "^23.0.7",
     "storybook": "^8.0.5",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
@@ -75,5 +75,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/perquillo/hooks.git"
   }
 }
