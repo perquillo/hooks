@@ -13,18 +13,12 @@
     ],
     "@semantic-release/github",
     [
-      "@semantic-release/exec",
-      {
-        "prepareCmd": "npx rjp package.json version nextRelease.version"
-      }
-    ],
-    [
       "@semantic-release/git",
       {
         "assets": [
           "package.json"
         ],
-        "message": "Release perquillo@<%= nextRelease.version %> module. [skip ci]"
+        "message": "chore(release): @perquillo/hooks@${nextRelease.version}. [skip ci]\n\n${nextRelease.notes}"
       }
     ],
     "@semantic-release/changelog"

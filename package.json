@@ -11,9 +11,7 @@
     "lint": "eslint ./libs --ext .ts,.tsx",
     "commit": "cz",
     "test": "jest --passWithNoTests --config ./jest.config.ts",
-    "build": "npm run build:pkg && npm run copy:files",
-    "build:pkg": "tsup",
-    "copy:files": "cp package.json dist/ && cp README.md dist/",
+    "build": "tsup && cp package.json dist/",
     "semantic-release": "semantic-release"
   },
   "keywords": [
@@ -31,11 +29,11 @@
     "@babel/preset-env": "^7.24.3",
     "@babel/preset-react": "^7.24.1",
     "@babel/preset-typescript": "^7.24.1",
-    "@chromatic-com/storybook": "1.2.26",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^10.0.2",
+    "@semantic-release/npm": "^12.0.0",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.2",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
@@ -77,17 +75,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/perquillo/perquillo.git"
-  },
-  "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
   }
 }
