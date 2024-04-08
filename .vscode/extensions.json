@@ -1,0 +1,18 @@
+{
+  "recommendations": [
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "kamikillerto.vscode-colorize",
+    "dbaeumer.vscode-eslint",
+    "figma.figma-vscode-extension",
+    "github.vscode-github-actions",
+    "github.copilot",
+    "github.copilot-chat",
+    "eamodio.gitlens",
+    "wix.vscode-import-cost",
+    "orta.vscode-jest",
+    "firsttris.vscode-jest-runner",
+    "rubymaniac.vscode-paste-and-indent",
+    "esbenp.prettier-vscode"
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "libs/**/*.test.{ts,tsx}": ["yarn test"],
+  "libs/**/*.{ts,tsx}": ["yarn lint", "yarn format"]
+}
