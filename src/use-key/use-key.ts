@@ -91,22 +91,22 @@ type Key =
 
 type SpecialKey = 'ctrlKey' | 'shiftKey' | 'altKey' | 'metaKey';
 
-export const useKey = (key: Key, callback: () => void, funcKey?: SpecialKey) => {
-  const handler = (event: KeyboardEvent) => {
-    const el = event.target as HTMLElement,
-      isSearchBar = el.getAttribute('type') === 'search',
+export const useKey = (key: Key, cb: () => void, funcKey?: SpecialKey) => {
+  const callback = (event: KeyboardEvent) => {
+    const element = event.target as HTMLElement,
+      isSearchBar = element.getAttribute('type') === 'search',
       isKey = event.key === key,
-      isSpecialKey = event[funcKey!];
+      isSpecialKey = !!funcKey && event[funcKey];
 
-    if (isKey && !isSearchBar && isSpecialKey) {
+    if (isSearchBar) return;
+
+    if (isKey && isSpecialKey) {
       event.preventDefault();
-      return callback();
+      return cb();
     }
 
-    if (isKey && !isSearchBar) {
-      return callback();
-    }
+    if (isKey && !funcKey) return cb();
   };
 
-  useEventCallback({ eventName: 'keydown', callback: handler });
+  useEventCallback({ eventName: 'keydown', callback });
 };
