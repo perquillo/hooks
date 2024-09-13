@@ -24,7 +24,7 @@
         "assets": [
           "package.json"
         ],
-        "message": "chore(release): @perquillo/hooks@${nextRelease.version}. [skip ci]\n\n${nextRelease.notes}"
+        "message": ":tickets: publish(release): @perquillo/hooks@${nextRelease.version}. [skip ci]\n\n${nextRelease.notes}"
       }
     ],
     "@semantic-release/changelog"

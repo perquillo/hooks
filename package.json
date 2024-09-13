@@ -1,6 +1,6 @@
 {
   "name": "@perquillo/hooks",
-  "version": "1.2.1",
+  "version": "0.0.1",
   "main": "index.js",
   "module": "index.mjs",
   "types": "index.d.ts",
@@ -44,6 +44,7 @@
     "@typescript-eslint/parser": "^7.4.0",
     "babel-jest": "^29.7.0",
     "commitizen": "^4.3.0",
+    "commitizen-emoji": "^1.0.5",
     "cz-conventional-changelog": "^3.3.0",
     "cz-emoji-conventional": "^1.0.2",
     "eslint": "^8.57.0",
@@ -74,7 +75,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-emoji-conventional"
+      "path": "./node_modules/commitizen-emoji"
     }
   },
   "repository": {
